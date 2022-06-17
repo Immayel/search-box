@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search Box</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+<div class="container">
+     <div class="search-bar">
+         <div id="select">
+          <p id="selectText"> All categories</p>
+          <img  src= "C:\Users\immay\Desktop\Amal\Html\Search-box\icons8-arrow-down-64.png">
+          
+        <!-- <a href="https://www.flaticon.com/free-icons/next" title="next icons">Next icons created by Roundicons - Flaticon</a>-->
+         <ul id="list">
+            <li class="options">All categories</li>
+            <li class="options">Electronics</li>
+            <li class="options"> furniture</li>
+            <li class="options"> sports</li>
+            <li class="options">fashion</li>
+         </ul>
+    
+    
+    </div>
+    <input type="text"  id="inputfield" placeholder=" Search In All categories">
+     </div>
+</div>
+<script>
+let select = document.getElementById("select");
+let list = document.getElementById("list");
+let selectText = document.getElementById("selectText");
+let inputfield = document.getElementById("inputfield");
+
+let options = document.getElementsByClassName("options");
+
+select.onclick= function(){
+list.classList.toggle("open");
+}
+for(Option of options){
+    Option.onclick =  function()
+    {
+        selectText.innerHTML = this.innerHTML;
+        inputfield.Placeholder ="search In" + selectText.innerHTML;
+    }
+}
+</script>
+</body>
+</html>
